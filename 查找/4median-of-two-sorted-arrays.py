@@ -41,6 +41,7 @@ class Solution:
         else:
             return (getKthElement(totalLength // 2) + getKthElement(totalLength // 2 + 1)) / 2
 
+
 '''
 作者：LeetCode - Solution
 链接：https: // leetcode.cn / problems / median - of - two - sorted - arrays / solution / xun - zhao - liang - ge - you - xu - shu - zu - de - zhong - wei - s - 114 /
