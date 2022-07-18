@@ -13,7 +13,7 @@ select p.product_id, p.product_name
 from Product p, Sales s
 where p.product_id = s.product_id
 group by s.product_id
-having(sum(sale_date between '2019-01-01' and '2019.03-31') = count(*))
+having(sum(sale_date between '2019-01-01' and '2019.03-31') = count(*));
 
 # 作者：kobe24o
 # 链接：https://leetcode.cn/problems/sales-analysis-iii/solution/havingsumsale_date-between-2019-01-01-and-201903-3/
