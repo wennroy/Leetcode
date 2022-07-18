@@ -1,4 +1,5 @@
 # 看了解答才看懂了题目= =
+import math
 
 class MinStack:
     def __init__(self):
