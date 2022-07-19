@@ -43,4 +43,4 @@ import copy
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         p=copy.deepcopy(head)
-            return p
+        return p
