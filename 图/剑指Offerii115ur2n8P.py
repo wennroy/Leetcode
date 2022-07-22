@@ -1,5 +1,6 @@
 from collections import deque
-from itertools import pairwise
+from more_itertools import pairwise
+
 
 class Solution:
     def sequenceReconstruction(self, nums: List[int], sequences: List[List[int]]) -> bool:
