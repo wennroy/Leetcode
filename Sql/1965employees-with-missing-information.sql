@@ -76,6 +76,14 @@ LEFT JOIN Salaries S on E.employee_id = S.employee_id;
 # 5,Kristian,5,76071
 # 7,Roy,,
 
+SELECT * FROM Employees E
+CROSS JOIN Salaries S on E.employee_id = S.employee_id;
+
+# 4,Haven,4,63539
+# 5,Kristian,5,76071
+
+
+
 # UNION 单纯将表格并列起来
 SELECT * FROM Employees E
 UNION
