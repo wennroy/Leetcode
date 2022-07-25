@@ -13,7 +13,7 @@ https://www.w3schools.com/sql/func_mysql_coalesce.asp
 Return the first non-null value in a list:
 
 ```mysql
-COALESCE(val1, val2, ...., val_n)
+COALESCE(val1, val2, ...., val_n);
 ```
 
 ## 时间判断的各种写法
@@ -31,4 +31,15 @@ EXTRACT(YEAR FROM sale_date) = 2020
 sale_date BETWEEN '2020-01-01' AND '2020-12-31'
 sale_date > '2019-12-31' AND sale_date < '2021-01-01'
 sale_date >= '2020-01-01' AND sale_date <= '2020-12-31'
+```
+
+## WINDOWN FUNCTION
+https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html
+
+### ROW_NUMBER()
+https://www.mysqltutorial.org/mysql-window-functions/mysql-row_number-function/
+
+返回当前筛选出的表的行数。
+```mysql
+ROW_NUMBER() OVER (<partition_definition> <order_definition>);
 ```
