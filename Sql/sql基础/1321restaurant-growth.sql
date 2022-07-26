@@ -51,3 +51,14 @@ WHERE DATEDIFF(visited_on, (SELECT MIN(visited_on) FROM Customer)) >= 6
 # 链接：https://leetcode.cn/problems/restaurant-growth/solution/jiang-jie-bing-gai-jin-ping-lun-qu-da-la-34xv/
 # 来源：力扣（LeetCode）
 # 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+# 也可以换成RANGE函数
+
+select visited_on, amount, average_amount
+from (
+select distinct visited_on,
+sum(amount) over(order by to_days(visited_on) range 6 preceding) amount,
+round(sum(amount) over(order by to_days(visited_on) range 6 preceding)/7, 2) average_amount
+from Customer
+order by visited_on) c
+where datediff(visited_on, (select min(visited_on) from Customer))>=6
