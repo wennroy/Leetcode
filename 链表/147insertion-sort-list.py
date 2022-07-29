@@ -44,7 +44,9 @@ class Solution:
         return head
 
 # 官方的解法好简洁啊
+
 # 一个小技巧，利用Dummyhead来避免当前一个节点是None的时候，需要和None节点交换的问题，减少代码判断量。
+
 
 class Solution:
     def insertionSortList(self, head: ListNode) -> ListNode:
