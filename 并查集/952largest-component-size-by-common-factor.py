@@ -37,6 +37,7 @@ class Solution:
 # 利用值域来构建并查集
 from collections import Counter
 
+
 class UnionFind:
     def __init__(self, n: int):
         self.parent = list(range(n))
