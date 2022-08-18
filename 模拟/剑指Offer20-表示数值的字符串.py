@@ -78,6 +78,7 @@ class Solution:
 
 
 # 标答的自动机，好酷啊
+# 我怎么就想不到这种方法呢
 
 from enum import Enum
 class Solution:
