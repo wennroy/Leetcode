@@ -3,7 +3,7 @@
 ## Mysql常用语句查询
 https://www.w3schools.com/mysql
 
-mysql是怎样陨星的：
+mysql是怎样运行的：
 https://relph1119.github.io/mysql-learning-notes/
 
 ## Mysql REGEXP的运用
