@@ -13,7 +13,7 @@ class Solution:
             left_idx = i
             while stack:
                 cur_val, cur_idx, val_idx = stack.pop()
-                if val < cur_val:
+                if val < cur_val:   # 这里取等于和不取等于结果是一致的。2*3+5*5 和 5*2+7*3都为31。中间那一段只有一边会进行计算。
                     min_range[cur_val].append((cur_idx, val_idx, i))
                     left_idx = cur_idx
                 else:
