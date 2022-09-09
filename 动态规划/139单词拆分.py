@@ -42,11 +42,33 @@ class Solution:
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         n = len(s)
-        dp = [False] * (n+1)
+        dp = [False] * (n + 1)
         dp[0] = True
-        for i in range(1,n+1):
+        for i in range(1, n + 1):
             for j in range(i):
                 if dp[j] and s[j:i] in wordDict:
                     dp[i] = True
 
         return dp[-1]
+
+
+# 记忆化回溯
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        import functools
+        @functools.lru_cache(None)
+        def back_track(s):
+            if (not s):
+                return True
+            res = False
+            for i in range(1, len(s) + 1):
+                if (s[:i] in wordDict):
+                    res = back_track(s[i:]) or res
+            return res
+
+        return back_track(s)
+
+# 作者：wu_yan_zu
+# 链接：https://leetcode.cn/problems/word-break/solution/dong-tai-gui-hua-ji-yi-hua-hui-su-zhu-xing-jie-shi/
+# 来源：力扣（LeetCode）
+# 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
