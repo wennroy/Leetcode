@@ -15,7 +15,7 @@ class Solution:
             dp[i] = dp[i - 1] + code[i + T] - code[i]
         return dp if k > 0 else dp[::-1]
 
-# 前缀和
+# 滑动窗口
 class Solution:
     def decrypt(self, code: List[int], k: int) -> List[int]:
         if k == 0:
