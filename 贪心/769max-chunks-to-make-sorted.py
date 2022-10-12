@@ -43,3 +43,19 @@ class Solution:
 # 链接：https://leetcode.cn/problems/max-chunks-to-make-sorted/solution/zui-duo-neng-wan-cheng-pai-xu-de-kuai-by-d1nt/
 # 来源：力扣（LeetCode）
 # 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+# 1012/2022更新
+class Solution:
+    def maxChunksToSorted(self, arr: List[int]) -> int:
+        n = len(arr)
+        idx_list = sorted(range(n), key=lambda x: arr[x])
+        ans = 0
+        cur_block = 0
+        for i in range(n):
+            if i == cur_block and idx_list[i] <= cur_block:
+                ans += 1
+                cur_block += 1
+            else:
+                cur_block = max(cur_block, idx_list[i])
+
+        return ans
