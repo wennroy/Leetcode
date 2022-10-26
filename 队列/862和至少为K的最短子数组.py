@@ -26,3 +26,22 @@ class Solution(object):
 # 链接：https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/solution/he-zhi-shao-wei-k-de-zui-duan-zi-shu-zu-by-leetcod/
 # 来源：力扣（LeetCode）
 # 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+# 自己想的超时前缀和
+from math import inf
+class Solution(object):
+    def shortestSubarray(self, A, K):
+        n = len(A)
+        pref = [0] * (n + 1)
+        for i in range(1, n + 1):
+            pref[i] = pref[i - 1] + A[i - 1]
+        ans = n + 1
+
+        for i in range(n + 1):
+            for j in range(i + 1, min(i + ans + 1, n + 1)):
+                if pref[j] - pref[i] >= K:
+                    ans = min(ans, j - i)
+                    break
+
+        return ans if ans != n + 1 else -1
