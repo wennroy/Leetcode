@@ -13,3 +13,4 @@ A repository records the path of my leetcode journey. Most of the codes should w
 * [剑指 Offer 45. 把数组排成最小的数](https://leetcode.cn/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)
 * [剑指 Offer 37. 序列化二叉树](https://leetcode.cn/problems/xu-lie-hua-er-cha-shu-lcof/)
 * [907. 子数组的最小值之和](https://leetcode.cn/problems/sum-of-subarray-minimums/)
+* [1201. 丑数 III](https://leetcode.cn/problems/ugly-number-iii/)
