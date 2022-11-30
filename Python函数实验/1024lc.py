@@ -43,7 +43,7 @@ class Solution:
 
 if __name__ == '__main__':
     sol = Solution()
-    numbers = [1024,1024,6,2,4,0,16]
-    operations = ["|", ">>", "&", "&", "//"]
+    numbers = [2, 4, 1024,0,2,2,32,16]
+    operations = [">>", "&", "&", "-", "^","^"]
     ans = sol.calculate_1024(numbers, operations)
     print(ans)
